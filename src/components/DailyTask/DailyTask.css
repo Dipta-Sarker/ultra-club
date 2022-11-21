@@ -15,8 +15,25 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 15px;
+    margin: 15px 0;
     background-color: whitesmoke;
     padding-top: 5px;
     border-radius: 5px;
+}
+.men-time{
+    display: flex;
+    justify-content: space-around;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 10px;
+}
+.men-time button{
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    padding: 8px;
+}
+.men-time button:hover{
+    background-color: blueviolet;
+    color:white;
 }
