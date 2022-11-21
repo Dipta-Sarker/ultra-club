@@ -21,7 +21,11 @@
 @media screen and (max-width:600px) {
     .cart{
         
-        grid-template-columns: repeat(2, 1fr);
-        background-color: red;
+        grid-template-columns:  1fr;
+        
     }   
+    .activites{
+        display: grid;
+        grid-template-columns:1fr;
+    }
 }
