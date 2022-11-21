@@ -1,0 +1,19 @@
+.activites{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.daily-activites{
+    background-color: rgb(169, 171, 237);
+
+}
+
+.daily-task{
+    background-color: white;
+    height: 700px;
+}
+
+.cart{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
