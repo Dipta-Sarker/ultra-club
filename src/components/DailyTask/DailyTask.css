@@ -1,0 +1,22 @@
+.men{
+    padding:10px;
+}
+.men-info{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.men-info img{
+    width: 30%;
+    margin-right: 10px;
+}
+.men-health{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;
+    background-color: whitesmoke;
+    padding-top: 5px;
+    border-radius: 5px;
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SingleActivity from '../../components/SingleActivity/SingleActivity';
+import DailyTask from '../DailyTask/DailyTask';
 import Header from '../Header/Header';
 import './Activities.css'
 const Activities = () => {
@@ -28,7 +29,7 @@ const Activities = () => {
                 </div>
            </div>
            <div className="daily-task">
-                <h1>Daily Task</h1>
+                <DailyTask></DailyTask>
            </div>
         </div>
     );
