@@ -11,8 +11,8 @@ const Activities = () => {
         .then(data => setActivites(data))
     },[])
 
-    const addToList =()=>{
-        console.log("go Ahead Boss");
+    const addToList =(id)=>{
+        console.log(id);
     }
     return (
         <div className='activites'>

@@ -3,7 +3,7 @@ import './SingleActivity.css'
 const SingleActivity = (props) => {
      const {addToList} = props
      
-    const {name,img,time} =   props.props;
+    const {id,name,img,time} =   props.props;
     return (
         <div className='single-cart'> 
            <div className="cart-main">
@@ -13,7 +13,7 @@ const SingleActivity = (props) => {
            <div className='cart-info'>
                 <h4>{name}</h4>
                 <p>Time: {time}s</p>
-                <button onClick={addToList} className="cart-btn">Add To List</button>
+                <button onClick={()=>addToList(id)} className="cart-btn">Add To List</button>
             </div>
             </div>
         </div>
