@@ -1,7 +1,14 @@
 import React from 'react';
 import men from '../../Image/men.png';
-import './DailyTask.css'
-const DailyTask = () => {
+import './DailyTask.css';
+const DailyTask = (props) => {
+    const {items} =props;
+
+    let second = 0;
+    for(const oneItem of items){
+         second = second + parseInt(oneItem.time);
+    }
+
     const getNumber =(id) =>{
    const number =     document.getElementById(id).innerText;
    const breakTime = document.getElementById('break')
@@ -43,13 +50,14 @@ const DailyTask = () => {
                 <h5 className='title'>Exercise</h5>
                 <div className="exercise-time">
                     <h5>Exercise Details:</h5>
-                    <h5>00</h5>
+                    <p> {second} seconds</p>
                 </div>
             </div>
             <div className="break-time">
                 <h5>Break Time</h5>
                 <p><span id='break'>00</span> seconds</p>
             </div>
+            <button className='cart-btn'>Activity Complete</button>
         </div>
     );
 };

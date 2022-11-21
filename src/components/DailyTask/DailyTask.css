@@ -1,5 +1,7 @@
 .men{
     padding:10px;
+    position: sticky;
+    top: 0;
 }
 .men-info{
     margin-top: 30px;
@@ -46,7 +48,7 @@
     border-radius: 5px;
 }
 .break-time{
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
 .title{

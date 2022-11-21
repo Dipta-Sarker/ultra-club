@@ -12,8 +12,8 @@ const SingleActivity = (props) => {
            </div>
            <div className='cart-info'>
                 <h4>{name}</h4>
-                <p>Time: {time}s</p>
-                <button onClick={()=>addToList(id)} className="cart-btn">Add To List</button>
+                <p>Time required: {time}s</p>
+                <button onClick={()=>addToList(props.props)} className="cart-btn">Add To List</button>
             </div>
             </div>
         </div>

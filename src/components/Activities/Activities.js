@@ -5,15 +5,18 @@ import Header from '../Header/Header';
 import './Activities.css'
 const Activities = () => {
     const [activites, setActivites] = useState([])
-
+    const [items, setItems] = useState([])
+    console.log(items)
     useEffect(()=>{
         fetch('fakeData.json')
         .then(res => res.json())
         .then(data => setActivites(data))
     },[])
 
-    const addToList =(id)=>{
-        console.log(id);
+    const addToList =(item)=>{
+      const newItems = [...items , item]
+      setItems(newItems)
+
     }
     return (
         <div className='activites'>
@@ -29,7 +32,7 @@ const Activities = () => {
                 </div>
            </div>
            <div className="daily-task">
-                <DailyTask></DailyTask>
+                <DailyTask items={items}></DailyTask>
            </div>
         </div>
     );
