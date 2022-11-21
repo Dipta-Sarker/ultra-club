@@ -37,3 +37,18 @@
     background-color: blueviolet;
     color:white;
 }
+
+.exercise-time , .break-time{
+    display: flex;
+    justify-content: space-around;
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 5px;
+}
+.break-time{
+    margin-top: 20px;
+}
+
+.title{
+    margin-top: 35px;
+}

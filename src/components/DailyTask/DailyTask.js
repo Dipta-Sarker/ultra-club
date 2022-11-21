@@ -4,7 +4,8 @@ import './DailyTask.css'
 const DailyTask = () => {
     const getNumber =(id) =>{
    const number =     document.getElementById(id).innerText;
-   console.log(number)
+   const breakTime = document.getElementById('break')
+   breakTime.innerHTML = number;
    
     }
     return (
@@ -31,15 +32,23 @@ const DailyTask = () => {
                     <p>Age</p>
                 </div>
             </div>
-            <h5>Add A Break</h5>
+            <h5 className='title'>Add A Break</h5>
             <div className="men-time">
-                <button onClick={()=>getNumber('ten')}><h6 id='ten'>10s</h6></button>
-                <button onClick={()=>getNumber('twenty')}><h6 id='twenty'>20s</h6></button>
-                <button onClick={()=>getNumber('thirty')}><h6 id='thirty'>30s</h6></button>
-                <button onClick={()=>getNumber('forty')}><h6 id='forty'>40s</h6></button>
+                <button onClick={()=>getNumber('ten')}><h6><span id='ten'>10</span>s</h6></button>
+                <button onClick={()=>getNumber('twenty')}><h6><span id='twenty'>20</span>s</h6></button>
+                <button onClick={()=>getNumber('thirty')}><h6><span id='thirty'>30</span>s</h6></button>
+                <button onClick={()=>getNumber('forty')}><h6><span id='forty'>40</span>s</h6></button>
             </div>
-            <div className='excrcise'>
-                <h5>Exercise</h5>
+            <div className='exercise'>
+                <h5 className='title'>Exercise</h5>
+                <div className="exercise-time">
+                    <h5>Exercise Details:</h5>
+                    <h5>00</h5>
+                </div>
+            </div>
+            <div className="break-time">
+                <h5>Break Time</h5>
+                <p><span id='break'>00</span> seconds</p>
             </div>
         </div>
     );
