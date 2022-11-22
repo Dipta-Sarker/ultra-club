@@ -6,7 +6,7 @@ import './Activities.css'
 const Activities = () => {
     const [activites, setActivites] = useState([])
     const [items, setItems] = useState([])
-    console.log(items)
+    
     useEffect(()=>{
         fetch('fakeData.json')
         .then(res => res.json())

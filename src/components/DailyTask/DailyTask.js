@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import men from '../../Image/men.png';
 import './DailyTask.css';
 const DailyTask = (props) => {
+    const [number, setNumber] = useState(0)
     const {items} =props;
 
     let second = 0;
@@ -11,10 +12,15 @@ const DailyTask = (props) => {
 
     const getNumber =(id) =>{
    const number =     document.getElementById(id).innerText;
-   const breakTime = document.getElementById('break')
-   breakTime.innerHTML = number;
-   
+   setNumber(number)
+   localStorage.setItem(1,number)
     }
+
+useEffect(()=>{
+    const storage = localStorage.getItem(1);
+    setNumber(storage)
+},[])
+
     return (
         <div className='men'>
             <div className='men-info'>
@@ -55,7 +61,7 @@ const DailyTask = (props) => {
             </div>
             <div className="break-time">
                 <h5>Break Time</h5>
-                <p><span id='break'>00</span> seconds</p>
+                <p><span id='break'>{number}</span> seconds</p>
             </div>
             <button className='cart-btn'>Activity Complete</button>
         </div>
